@@ -12,16 +12,19 @@ def homepage():
 
 @app.route("/", methods = ["POST"])    
 def homepage_postsubmit():
-	#import pdb; pdb.set_trace()
+	import pdb; pdb.set_trace()
 	equation = request.form["equation"] # "A * B + B * C"
 	logic_of_variables = request.form["logic_of_variables"] # "1,0,0,0"
-	components = equation.split(" ") # ['A', '*','B','+','B','*','C']
+	components = list(equation) # ["A", "'", "*","B","+","B","*","C"]
 	logic_split = logic_of_variables.split(",") # ['1','0','0','0']
 	n = 0
 	for logic_value in logic_split:
 
 		components[n] = logic_value
-		n = n+2
+		if components[n+1] = "'":
+			n = n+3
+		else:
+			n = n+2
 
 	symbol_for_and = "*"
 	symbol_for_or = "+"
