@@ -6,8 +6,8 @@ class AND(object):
         self.pinB = pinB
         
     def gateFunction(self):
-        
-        if self.pinA == self.pinB == 1:
+        #import pdb; pdb.set_trace()
+        if self.pinA == self.pinB == "1":
             return 1
         else:
             return 0
@@ -26,9 +26,9 @@ class OR(object):
     
     def gateFunction(self):
         
-        if self.pinA == 1:
+        if self.pinA == "1":
             return 1
-        elif self.pinB == 1:
+        elif self.pinB == "1":
             return 1
         else:
             return 0
@@ -46,7 +46,7 @@ class NOT(object):
     
     def gateFunction(self):
         
-        if self.pinA == 1:
+        if self.pinA == "1":
             return 0
         else:
             return 1

@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<br></br>
+
+ <b>F = {{equation}}</b> 
+
+
+<p> Please list the logic of your variables (either 1 or 0) separated with commas and starting with the logic of A. Example: A,B,C = 1,0,0</p>
+
+
+
+<form class="logic" action="/" method="POST">
+    <fieldset class="fieldsetcss">
+
+    <label for = "logic_of_variables">{{components_no_delims}}  = </label> <textarea class = "logic_values" name="logic"></textarea>
+    <button type="submit" class="btn btn-default">Submit</button>
+    </fieldset>
+    
+
+    
+    
+    <!-- Logic of Variables=:<textarea name = "logic_of_variables"></textarea> -->
+    
+</form>
+
+<br></br>
+<input type=button value="Solve another logic-circuit" onClick="javascript:history.go(-1);">
+
+
+ {% endblock %}
+

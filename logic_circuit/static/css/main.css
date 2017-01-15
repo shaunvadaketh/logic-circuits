@@ -1,0 +1,31 @@
+body{
+	background-color: lightblue;
+}         
+
+textarea {
+    resize: both;
+    vertical-align: middle;
+}
+
+label{
+display:inline-block;
+width:200px;
+
+text-align:right;
+}
+
+input{
+
+}
+
+.fieldsetcss{
+
+border:none;
+width:500px;
+margin-left:-150px;
+}
+
+/*.logic_values {
+	margin-top:100px;
+	
+}*/
